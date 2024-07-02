@@ -1,3 +1,5 @@
+using InventoryManagementSystem.Application.Services;
+using InventoryManagementSystem.Domain.Interfaces;
 using InventoryManagementSystem.Infrastructure.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -35,6 +37,8 @@ builder.Services.AddAuthentication(options =>
         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWT:Secret"]))
     };
 });
+
+builder.Services.AddScoped<ILoginService, LoginService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

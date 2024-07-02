@@ -16,4 +16,10 @@
     <ProjectReference Include="..\InventoryManagementSystem.Infrastructure\InventoryManagementSystem.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Validations\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
